@@ -1,0 +1,78 @@
+body{
+	background-color: MidnightBlue;
+	font-family: "Lucida Console", Monaco, monospace;
+	color: GhostWhite;
+}
+
+img.imagem{
+	width: 300px;
+	height: 300px;
+}
+
+#estadio{
+	background-color: Maroon;
+	position: relative;
+	float: left;
+	left: 5%;
+	text-align: center;
+}
+
+#bola{
+	background-color: Maroon;
+	position: relative;
+	float: left;
+	left: 5%;
+	text-align: center;
+}
+
+#partida{
+	background-color: Maroon;
+	position: relative;
+	float: left;
+	left: 5%;
+	text-align: center;
+}
+
+h1{
+	background-color: Maroon;
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+	background-color: Maroon;
+	margin-bottom: 0;
+}
+
+li{
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+
+ul{
+	background-color: Maroon;
+	margin-top: 0; 
+	font-size: 
+}
+
+p{
+	background-color: Maroon;
+	margin: 0;
+}
+
+.table{
+	position: relative;
+	left: 25%;
+	text-align: center;
+	font-size: 25px;
+}
+
+tr{
+	background-color: DarkSlateGrey;
+	color: GhostWhite;
+}
+
+th{
+	background-color: Gold;
+	color: black;
+}
