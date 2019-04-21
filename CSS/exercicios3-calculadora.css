@@ -1,0 +1,53 @@
+body{
+	display: grid;
+	background-color: MidnightBlue;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 25px;
+	justify-content: center;
+	margin-top: 5%;
+}
+
+.container{
+	display: grid;
+	grid-template-rows: repeat (6, 50px);
+	grid-template-columns: repeat(4, 50px);
+	grid-gap: 10px;
+	width: 280px;
+	height: 350px;
+	background-color: DarkGray;	
+	justify-content: center;
+	text-align: center;
+}
+
+#item1{
+	grid-row: 1;
+	grid-column: 1 / span 4;
+	background-color: Gainsboro;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: right;
+}
+
+.item{
+	align-content: center;
+	background-color: GhostWhite;
+}	
+
+#item17{
+	grid-row: 6;
+	grid-column: 1 / span 2;
+	background-color: Gray;
+	margin-bottom: 20px;
+}
+
+#item18{
+	background-color: GhostWhite;	
+	margin-bottom: 20px;
+}
+
+#item19{
+	grid-row: 5 / span 2;
+	grid-column: 4;
+	background-color: Gray;	
+	margin-bottom: 20px;
+}
