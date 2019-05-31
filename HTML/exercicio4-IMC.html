@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>Exercício 4 - JS</title>
+	<link rel="stylesheet" type="text/css" href="../CSS/exercicio4-IMC.css">
+</head>
+<body>
+	<form id="conteiner">
+		<div id="div1">IMC</div>
+		<div id="div2">Altura <input id="input1" type="text" name="altura"> m</div>
+		<div id="div3">Peso <input id="input2" type="text" name="peso"> kg</div>
+		<div id="div4"> <input id="calcular" type="button" name="submit" value="Calcular"></div>
+	</form>
+		<div id="div5">Conclusão: <br> <textarea disabled="true" id="area" name="area"></textarea></div>
+
+	<script type="text/javascript">
+
+		var altura = document.getElementById("input1");
+		var peso = document.getElementById("input2");
+		var area = document.getElementById("area");
+
+		function imc(){
+			var indice = peso.value/(altura.value*altura.value)
+			indice = parseFloat(indice.toFixed(1));
+			conclusao(indice)
+		}
+
+		function conclusao(indice){
+			if (indice <= 16.9){
+				var ideal = peso.value - 18.5*(altura.value*altura.value)
+				ideal = parseFloat(ideal.toFixed(1));
+				area.value = ("Sinto muito, mas o seu IMC é de "+indice+" kg/m2, por isso você está muito abaixo do peso e deveria engordar no mínimo "+ideal+" kg.")
+			} else if (indice <= 18.4){
+				var ideal = peso.value - 18.5*(altura.value*altura.value)
+				ideal = parseFloat(ideal.toFixed(1));
+				area.value = ("Sinto muito, mas o seu IMC é de "+indice+" kg/m2, por isso você está abaixo do peso e deveria engordar no mínimo "+ideal+" kg.")
+			} else if (indice <= 24.9){
+			area.value = ("Parabéns!! Seu IMC é de "+indice+" kg/m2, por isso você está no peso normal")
+			} else if (indice <= 29.9){
+				var ideal = peso.value - 24.9*(altura.value*altura.value) 
+				ideal = parseFloat(ideal.toFixed(1));
+				area.value = ("Sinto muito, mas o seu IMC é de "+indice+" kg/m2, por isso você está acima do peso e deveria emagrecer no mínimo "+ideal+" kg.")
+			} else if (indice <= 34.9){
+				var ideal = peso.value - 24.9*(altura.value*altura.value) 
+				ideal = parseFloat(ideal.toFixed(1));
+				area.value = ("Sinto muito, mas o seu IMC é de "+indice+" kg/m2, por isso você está com Obesidade Grau I e deveria emagrecer no mínimo "+ideal+" kg.")
+			} else if (indice <= 40){
+				var ideal = peso.value - 24.9*(altura.value*altura.value)
+				ideal = parseFloat(ideal.toFixed(1));
+				area.value = ("Sinto muito, mas o seu IMC é de "+indice+" kg/m2, por isso você está com Obesidade Grau II e deveria emagrecer no mínimo "+ideal+" kg.")
+			} else if (indice > 40){
+				var ideal = peso.value - 24.9*(altura.value*altura.value)
+				ideal = parseFloat(ideal.toFixed(1));
+				area.value = ("Sinto muito, mas o seu IMC é de "+indice+" kg/m2, por isso você está com Obesidade Grau III e deveria emagrecer no mínimo "+ideal+" kg.")
+			}
+
+		}
+		
+		document.getElementById("calcular").onclick = function(e){
+			imc()
+		}
+
+	</script>
+</body>
+</html>
