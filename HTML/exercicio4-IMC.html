@@ -9,9 +9,17 @@
 <body>
 	<form id="conteiner">
 		<div id="div1">IMC</div>
-		<div id="div2">Altura <input id="input1" type="text" name="altura"> m</div>
-		<div id="div3">Peso <input id="input2" type="text" name="peso"> kg</div>
-		<div id="div4"> <input id="calcular" type="button" name="submit" value="Calcular"></div>
+		<div id="div2">
+			<label title="Altura">
+				Altura <input id="input1" type="text" name="altura"> m
+			</label>
+		</div>
+		<div id="div3">
+			<label title="Peso">
+				Peso <input id="input2" type="text" name="peso"> kg
+			</label>
+		</div>
+		<div id="div4"><input id="calcular" type="button" name="submit" value="Calcular"></div>
 	</form>
 		<div id="div5">Conclusão: <br> <textarea disabled="true" id="area" name="area"></textarea></div>
 
@@ -24,10 +32,11 @@
 		function imc(){
 			var indice = peso.value/(altura.value*altura.value)
 			indice = parseFloat(indice.toFixed(1));
-			conclusao(indice)
+			return indice
 		}
 
-		function conclusao(indice){
+		function conclusao(){
+			var indice = imc()
 			if (indice <= 16.9){
 				var ideal = peso.value - 18.5*(altura.value*altura.value)
 				ideal = parseFloat(ideal.toFixed(1));
@@ -59,7 +68,7 @@
 		}
 		
 		document.getElementById("calcular").onclick = function(e){
-			imc()
+			conclusao()
 		}
 
 	</script>
